@@ -1,0 +1,21 @@
+body{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 12px;
+color: aquamarine;
+}
+
+.header{
+    background-color: darkgrey;
+
+}
+
+.article{
+    background-color: grey;
+
+}
+
+.footer{
+    color: white;
+    background-color: black;
+
+}
