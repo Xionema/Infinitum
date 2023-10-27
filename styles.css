@@ -20,6 +20,7 @@ background-color: black;
 #article{
     font-size: 16px;
     background-color: grey;
+    image-resolution: 400px, 200px;
 
 }
 
