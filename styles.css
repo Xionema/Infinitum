@@ -5,6 +5,10 @@ color: aquamarine;
 background-color: black;
 }
 
+nav ul li {
+    float: left;
+}
+
 header{
     font-size: 24px;
     background-color: darkgrey;
