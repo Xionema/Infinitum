@@ -24,7 +24,6 @@
                 <p id="win-rate">Win Rate: 59%</p>
                 <p>Mejores champs: <span id="best-champs">Amumu, Nocturne, Sejuani</span></p>
                 <p>Peores champs: <span id="worst-champs">Udyr, Shyvana, Evelynn</span></p>
-                <a href="#">Más datos de análisis...</a>
             </div>
         </div>
 
@@ -110,28 +109,4 @@
         Ad Infinitum is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games and all associated properties are trademarks or registered trademarks of Riot Games, Inc.
     </footer>
 </body>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const apiKey = 'RGAPI-37ab412e-1028-4f75-a0f1-db3ce38f4dc5';
-        const language = 'es-es';
-        const patchNotesURL = `https://es-es.leagueoflegends.com/latest-patch-notes`; // Placeholder para la URL de la API
-
-        fetch(patchNotesURL)
-            .then(response => response.json())
-            .then(data => {
-                const patchLink = document.getElementById('patch-link');
-                const patchImage = document.getElementById('patch-image');
-                const patchTitle = document.getElementById('patch-title');
-                const patchDate = document.getElementById('patch-date');
-
-                patchLink.href = data.url || 'https://www.leagueoflegends.com/es-es/news/game-updates/patch-14-20-notes/';
-                patchImage.src = data.image || 'https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Sona_6.jpg';
-                patchTitle.textContent = data.title || 'Notas de la versión';
-                patchDate.textContent = data.date ? new Date(data.date).toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit' }) : 'dd/mm';
-            })
-            .catch(error => {
-                console.error('Error al obtener las notas de la versión:', error);
-            });
-    });
-</script>
 </html>
