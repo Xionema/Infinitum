@@ -111,13 +111,11 @@
     </footer>
 </body>
 <script>
-    // Aquí se agregarán scripts para obtener y actualizar datos desde la API o base de datos.
     document.addEventListener('DOMContentLoaded', () => {
         const apiKey = 'RGAPI-37ab412e-1028-4f75-a0f1-db3ce38f4dc5';
         const language = 'es-es';
         const patchNotesURL = `https://es-es.leagueoflegends.com/latest-patch-notes`; // Placeholder para la URL de la API
 
-        // Obtener la última versión de las notas de parche
         fetch(patchNotesURL)
             .then(response => response.json())
             .then(data => {
@@ -126,15 +124,13 @@
                 const patchTitle = document.getElementById('patch-title');
                 const patchDate = document.getElementById('patch-date');
 
-                // Reemplazar con los datos obtenidos
                 patchLink.href = data.url || 'https://www.leagueoflegends.com/es-es/news/game-updates/patch-14-20-notes/';
                 patchImage.src = data.image || 'https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Sona_6.jpg';
                 patchTitle.textContent = data.title || 'Notas de la versión';
-                patchDate.textContent = data.date || 'dd/mm';
+                patchDate.textContent = data.date ? new Date(data.date).toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit' }) : 'dd/mm';
             })
             .catch(error => {
                 console.error('Error al obtener las notas de la versión:', error);
-                // Si hay un error, se mantienen los valores por defecto
             });
     });
 </script>
