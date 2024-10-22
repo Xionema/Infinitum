@@ -127,7 +127,7 @@ body {
 
 .meta-wr-badge {
     position: absolute;
-    bottom: 5px;
+    bottom: -5px;
     left: 50%;
     transform: translateX(-50%);
     background-color: darkgreen;
