@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil de Jugador - Ad Infinitum Esports</title>
+    <title>Dashboard Perfil de Jugador - Ad Infinitum Esports</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -76,7 +76,17 @@
         <!-- Noticias recientes -->
         <div class="news">
             <h3>Noticias relevantes</h3>
-            <p>Notas del parche 14.19</p>
+            <div id="latest-patch-notes" class="patch-notes">
+                <a href="#" id="patch-link" target="_blank">
+                    <div class="patch-content" style="position: relative; overflow: hidden; width: 100%; padding-top: 56.25%;">
+                        <img id="patch-image" src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Sona_6.jpg" alt="Imagen de la última versión" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: auto; height: 100%;">
+                        <div style="position: absolute; bottom: 10px; left: 10px; color: white; background-color: rgba(0, 0, 0, 0.7); padding: 5px;">
+                            <h4 id="patch-title">Notas de la versión</h4>
+                            <p id="patch-date" style="font-size: 0.8em;">dd/mm</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
 
         <!-- Meta actual -->
@@ -93,14 +103,39 @@
             <p>Mayores cambios:</p>
         </div>
     </div>
+
+    <!-- Pie de página -->
+    <footer style="margin-top: 20px; text-align: center; font-size: 0.8em; color: #ccc;">
+        Hecho con ❤️ desde Málaga.<br>
+        Ad Infinitum is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games and all associated properties are trademarks or registered trademarks of Riot Games, Inc.
+    </footer>
 </body>
 <script>
     // Aquí se agregarán scripts para obtener y actualizar datos desde la API o base de datos.
     document.addEventListener('DOMContentLoaded', () => {
-        // Ejemplo de cómo actualizar el contenido con datos de una API
         const apiKey = 'RGAPI-37ab412e-1028-4f75-a0f1-db3ce38f4dc5';
-        // getPlayerData(apiKey);
-        // getGlobalStats(apiKey);
+        const language = 'es-es';
+        const patchNotesURL = `https://es-es.leagueoflegends.com/latest-patch-notes`; // Placeholder para la URL de la API
+
+        // Obtener la última versión de las notas de parche
+        fetch(patchNotesURL)
+            .then(response => response.json())
+            .then(data => {
+                const patchLink = document.getElementById('patch-link');
+                const patchImage = document.getElementById('patch-image');
+                const patchTitle = document.getElementById('patch-title');
+                const patchDate = document.getElementById('patch-date');
+
+                // Reemplazar con los datos obtenidos
+                patchLink.href = data.url || patchNotesURL;
+                patchImage.src = data.image || 'https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Sona_6.jpg';
+                patchTitle.textContent = data.title || 'Notas de la versión';
+                patchDate.textContent = data.date || 'dd/mm';
+            })
+            .catch(error => {
+                console.error('Error al obtener las notas de la versión:', error);
+                // Si hay un error, se mantienen los valores por defecto
+            });
     });
 </script>
 </html>
