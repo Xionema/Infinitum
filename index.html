@@ -1,48 +1,106 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Porororororo</title>
-    <script src="script.js"></script>
+    <title>Perfil de Jugador - Ad Infinitum Esports</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <header>
-        <h1>Pururururu</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Noticias</a></li>
-                <li><a href="#">Guías</a></li>
-                <li><a href="#">Tienda</a></li>
-                <li><a href="#">Buscagrupos</a></li>
-                <li><a href="#">Herramientas</a></li>
-                <li><a href="#">Meta</a></li>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <a href="index.html">
+                <img src="logo.png" alt="ad infinitum esports">
+            </a>
+        </div>
+
+        <!-- Perfil del Jugador -->
+        <div class="profile">
+            <img src="avatar.png" alt="Avatar del Jugador">
+            <div class="profile-info">
+                <h2 id="profile-name">Xionema#EUW</h2>
+                <p id="rank-info">Oro IV, 1 LP</p>
+                <p id="win-rate">Win Rate: 59%</p>
+                <p>Mejores champs: <span id="best-champs">Amumu, Nocturne, Sejuani</span></p>
+                <p>Peores champs: <span id="worst-champs">Udyr, Shyvana, Evelynn</span></p>
+                <a href="#">Más datos de análisis...</a>
+            </div>
+        </div>
+
+        <!-- Progreso de LP -->
+        <div class="progress-tracking">
+            <h3>LP Progress Tracking</h3>
+            <canvas id="lpChart" width="400" height="200"></canvas>
+        </div>
+
+        <!-- Objetivos actuales -->
+        <div class="objectives">
+            <h3>Objetivos actuales</h3>
+            <ul id="current-objectives">
+                <li>Mantener la calma</li>
+                <li>Morir menos de 4 veces de media</li>
+                <li>Terminar la partida con un 5% más de oro que el rival (autotrack)</li>
             </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <section class="noticias">
-            <h2>Novedades</h2>
-            <!-- Aquí se insertarían las noticias a través de algún sistema dinámico, como PHP, Node.js, etc. -->
-            <article>
-                <a href="articuloejemplo.html">
-                    <img src="testimage.jpg" alt="Imagen de la Noticia 1" width="300px" height="200px">
-                    <h3>La gran polémica sobre el Copyright de Dungeons and Dragons</h3>
-                </a>
-                <p>La fricción de los nuevos Términos de Uso...</p>
-            </article>
-            <!-- ... más noticias ... -->
-        </section>
-    </main>
+            <h3>Ejercicios para hoy</h3>
+            <ul id="daily-exercises">
+                <li>No usar más de un ping cada vez</li>
+                <li>Morir menos de 5 veces por partida</li>
+                <li>Revisar la grabación de la última partida para comprobar el uso de pings y la toma de decisiones</li>
+            </ul>
+        </div>
 
-    <p>Editor de noticias<script src="editor.js"></script></p>
+        <!-- Partidas recientes -->
+        <div class="recent-games">
+            <h3>Partidas recientes</h3>
+            <div class="recent-game green">
+                <span>Amumu</span>
+                <span>2/1/6 vs avg, gold +8%</span>
+                <span>KDA: 10/2/6, CS: 224</span>
+                <img src="amumu.png" alt="Amumu">
+            </div>
+            <div class="recent-game red">
+                <span>Nocturne</span>
+                <span>-3.4k vs avg, gold -12%</span>
+                <span>KDA: 0/1/7, CS: 132</span>
+                <img src="nocturne.png" alt="Nocturne">
+            </div>
+            <div class="recent-game green">
+                <span>Sejuani</span>
+                <span>4k vs avg, gold +15%</span>
+                <span>KDA: 12/4/16, CS: 236</span>
+                <img src="sejuani.png" alt="Sejuani">
+            </div>
+        </div>
 
-    <footer>
-        <p>Hecho con ❤ desde Málaga.</p>
-    </footer>
+        <!-- Noticias recientes -->
+        <div class="news">
+            <h3>Noticias relevantes</h3>
+            <p>Notas del parche 14.19</p>
+        </div>
+
+        <!-- Meta actual -->
+        <div class="meta-info">
+            <h3>Meta actual (tu rol, tu elo, tu región)</h3>
+            <p>Mejores campeones:</p>
+            <div id="meta-best-champs">
+                <img src="champ1.png" alt="Champion 1">
+                <img src="champ2.png" alt="Champion 2">
+                <img src="champ3.png" alt="Champion 3">
+                <img src="champ4.png" alt="Champion 4">
+                <img src="champ5.png" alt="Champion 5">
+            </div>
+            <p>Mayores cambios:</p>
+        </div>
+    </div>
 </body>
+<script>
+    // Aquí se agregarán scripts para obtener y actualizar datos desde la API o base de datos.
+    document.addEventListener('DOMContentLoaded', () => {
+        // Ejemplo de cómo actualizar el contenido con datos de una API
+        const apiKey = 'RGAPI-37ab412e-1028-4f75-a0f1-db3ce38f4dc5';
+        // getPlayerData(apiKey);
+        // getGlobalStats(apiKey);
+    });
+</script>
 </html>
