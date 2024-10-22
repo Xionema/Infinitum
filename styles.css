@@ -33,6 +33,16 @@ body {
     width: 150px;
     cursor: pointer;
 }
+.footer {
+    text-align: center;
+    font-size: 0.8em;
+    color: #ccc;
+    width: 100%;
+    clear: both;
+    position: static;
+    bottom: 20px;
+    display: block;
+}
 .profile {
     display: flex;
     align-items: center;
