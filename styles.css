@@ -113,7 +113,8 @@ body {
 .meta-champion-container {
     text-align: center;
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: repeat (5, 1fr);
+    gap: 12px;
     width: 60px;
 }
 
