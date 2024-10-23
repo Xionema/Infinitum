@@ -112,6 +112,8 @@ body {
 /* Esto es para los avatares del estado del meta, etc. */
 .meta-champion-container {
     text-align: center;
+    display: grid;
+    grid-template-columns: auto;
     width: 60px;
 }
 
@@ -126,6 +128,7 @@ body {
     height: 60px;
     border-radius: 50%;
     object-fit: cover;
+    zoom: 5%;
 }
 
 .meta-wr-badge {
