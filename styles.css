@@ -1,17 +1,20 @@
+/* Base del cuerpo */
 body {
     font-family: 'Open Sans', sans-serif;
     color: #CC9C53;
     background: linear-gradient(to bottom, #000, #2e2e2e);
-    color: #f5f5f5;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    color: #f5f5f5;
 }
+
+/* Contenedor principal */
 .container {
-    width: 80%;
+    width: 85%;
     max-width: 1400px;
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -21,6 +24,8 @@ body {
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
+
+/* Cabecera */
 .header {
     grid-column: span 2;
     text-align: center;
@@ -29,20 +34,13 @@ body {
     margin-bottom: 20px;
     color: #fff;
 }
-.header img {
+
+.header-img {
     width: 150px;
     cursor: pointer;
 }
-.footer {
-    text-align: center;
-    font-size: 0.8em;
-    color: #ccc;
-    width: 100%;
-    clear: both;
-    position: static;
-    bottom: 20px;
-    display: block;
-}
+
+/* Perfil del usuario */
 .profile {
     display: flex;
     align-items: center;
@@ -51,38 +49,51 @@ body {
     padding: 20px;
     border-radius: 10px;
 }
-.profile img {
+
+.profile-img {
     border-radius: 50%;
     width: 150px;
     height: 150px;
 }
+
 .profile-info {
     display: flex;
     flex-direction: column;
 }
+
 .profile-info h2 {
     font-size: 1.8em;
     margin: 0;
 }
+
 .profile-info p {
     margin: 5px 0;
 }
+
 .profile-info a {
     color: #00bfff;
     text-decoration: none;
 }
+
+/* Seguimiento de progreso */
 .progress-tracking {
     background-color: #333;
     padding: 15px;
     border-radius: 10px;
     align-self: start;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+
+/* Secciones de contenido: Objetivos, noticias, etc. */
 .objectives, .recent-games, .news, .meta-info {
     background-color: #333;
     padding: 15px;
     border-radius: 10px;
     margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+
+/* Partidas recientes */
 .recent-game {
     margin-bottom: 15px;
     padding: 10px;
@@ -91,17 +102,22 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
 .recent-game.green {
     background-color: #28a745;
 }
+
 .recent-game.red {
     background-color: #dc3545;
 }
+
 .recent-game img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
 }
+
+/* Meta actual */
 .meta-info img {
     width: 40px;
     height: 40px;
@@ -109,7 +125,7 @@ body {
     margin-right: 10px;
 }
 
-/* Esto es para los avatares del estado del meta */
+/* Contenedor de campeones en el meta */
 .meta-champion-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -119,6 +135,7 @@ body {
     margin-top: 20px;
 }
 
+/* Elemento de cada campeón en el meta */
 .meta-champion-element {
     text-align: center;
     width: 60px;
@@ -146,3 +163,36 @@ body {
     display: inline-block;
 }
 
+/* Pie de página */
+.footer {
+    text-align: center;
+    font-size: 0.8em;
+    color: #ccc;
+    width: 100%;
+    clear: both;
+    position: static;
+    bottom: 20px;
+    display: block;
+}
+
+/* Ajustes adicionales de estética */
+.container {
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.objectives, .recent-games, .meta-info, .news {
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+p {
+    line-height: 1.5;
+}

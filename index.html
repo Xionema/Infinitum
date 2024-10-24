@@ -11,13 +11,13 @@
         <!-- Header -->
         <div class="header">
             <a href="/">
-                <img src="logo.png" alt="ad infinitum esports">
+                <img src="logo.png" alt="ad infinitum esports" class="header-img">
             </a>
         </div>
 
         <!-- Perfil del Jugador -->
         <div class="profile">
-            <img src="avatar.png" alt="Avatar del Jugador">
+            <img src="avatar.png" alt="Avatar del Jugador" class="profile-img">
             <div class="profile-info">
                 <h2 id="profile-name">Xionema#EUW</h2>
                 <p id="rank-info">Oro IV, 1 LP</p>
@@ -53,115 +53,119 @@
         <div class="recent-games">
             <h3>Partidas recientes</h3>
             <div class="recent-game green">
-                <span>Amumu</span>
-                <span>2/1/6 vs avg, gold +8%</span>
-                <span>KDA: 10/2/6, CS: 224</span>
+                <div>
+                    <span>Amumu</span>
+                    <span>2/1/6 vs avg, gold +8%</span>
+                    <span>KDA: 10/2/6, CS: 224</span>
+                </div>
                 <img src="amumu.png" alt="Amumu">
             </div>
             <div class="recent-game red">
-                <span>Nocturne</span>
-                <span>-3.4k vs avg, gold -12%</span>
-                <span>KDA: 0/1/7, CS: 132</span>
+                <div>
+                    <span>Nocturne</span>
+                    <span>-3.4k vs avg, gold -12%</span>
+                    <span>KDA: 0/1/7, CS: 132</span>
+                </div>
                 <img src="nocturne.png" alt="Nocturne">
             </div>
             <div class="recent-game green">
-                <span>Sejuani</span>
-                <span>4k vs avg, gold +15%</span>
-                <span>KDA: 12/4/16, CS: 236</span>
+                <div>
+                    <span>Sejuani</span>
+                    <span>4k vs avg, gold +15%</span>
+                    <span>KDA: 12/4/16, CS: 236</span>
+                </div>
                 <img src="sejuani.png" alt="Sejuani">
             </div>
         </div>
 
-<!-- Noticias recientes -->
-<div class="news">
-    <h3>Noticias relevantes</h3>
-    <div id="latest-patch-notes" class="patch-notes">
-        <a href="https://www.leagueoflegends.com/es-es/news/game-updates/patch-14-20-notes/" id="patch-link" target="_blank">
-            <div class="patch-content" style="position: relative; overflow: hidden; width: 100%; padding-top: 56.25%;">
-                <img id="patch-image" src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Sona_6.jpg" alt="Imagen de la última versión" style="position: absolute; top: -15%; left: 50%; transform: translateX(-50%); width: 100%; height: 100%; object-fit: cover; object-position: top;">
-                <div style="position: absolute; bottom: 10px; left: 10px; color: white; background-color: rgba(0, 0, 0, 0.7); padding: 5px;">
-                    <h4 id="patch-title">Notas de la versión</h4>
-                    <p id="patch-date" style="font-size: 0.8em;"><script>document.write(new Date().toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit' }));</script></p>
+        <!-- Noticias recientes -->
+        <div class="news">
+            <h3>Noticias relevantes</h3>
+            <div id="latest-patch-notes" class="patch-notes">
+                <a href="https://www.leagueoflegends.com/es-es/news/game-updates/patch-14-20-notes/" id="patch-link" target="_blank">
+                    <div class="patch-content" style="position: relative; overflow: hidden; width: 100%; padding-top: 56.25%;">
+                        <img id="patch-image" src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Sona_6.jpg" alt="Imagen de la última versión" style="position: absolute; top: -15%; left: 50%; transform: translateX(-50%); width: 100%; height: 100%; object-fit: cover; object-position: top;">
+                        <div style="position: absolute; bottom: 10px; left: 10px; color: white; background-color: rgba(0, 0, 0, 0.7); padding: 5px;">
+                            <h4 id="patch-title">Notas de la versión</h4>
+                            <p id="patch-date" style="font-size: 0.8em;"><script>document.write(new Date().toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit' }));</script></p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Meta actual -->
+        <div class="meta-info">
+            <h3>Meta actual (tu rol, tu elo, tu región)</h3>
+            <p>Mejores campeones:</p>
+            <div class="meta-champion-container">
+
+                <div class="meta-champion-element">         
+                    <p class="meta-champion-name">Shyvana</p>
+                    <img src="https://ddragon.leagueoflegends.com/cdn/14.20.1/img/champion/Shyvana.png" alt="Shyvana" class="meta-champion-image">
+                    <div class="meta-wr-badge">55.13%</div>
+                </div>
+
+                <div class="meta-champion-element">
+                    <p class="meta-champion-name">Nidalee</p>
+                    <img src="https://ddragon.leagueoflegends.com/cdn/14.20.1/img/champion/Nidalee.png" alt="Nidalee" class="meta-champion-image">
+                    <div class="meta-wr-badge">54.27%</div>
+                </div>
+
+                <div class="meta-champion-element">
+                    <p class="meta-champion-name">Amumu</p>
+                    <img src="https://ddragon.leagueoflegends.com/cdn/14.20.1/img/champion/Amumu.png" alt="Amumu" class="meta-champion-image">
+                    <div class="meta-wr-badge">53.88%</div>
+                </div>      
+
+                <div class="meta-champion-element">
+                    <p class="meta-champion-name">Viego</p>
+                    <img src="https://ddragon.leagueoflegends.com/cdn/14.20.1/img/champion/Viego.png" alt="Viego" class="meta-champion-image">
+                    <div class="meta-wr-badge">53.74%</div>
+                </div>
+
+                <div class="meta-champion-element">
+                    <p class="meta-champion-name">Sejuani</p>
+                    <img src="https://ddragon.leagueoflegends.com/cdn/14.20.1/img/champion/Sejuani.png" alt="Sejuani" class="meta-champion-image">
+                    <div class="meta-wr-badge">53.42%</div>
                 </div>
             </div>
-        </a>
+
+            <p>Mayores cambios:</p>
+            <div id="meta-big-changes" style="display: flex; gap: 10px;">
+                <div style="text-align: center; width: 60px;">
+                    <p style="margin: 0; font-size: 0.8em;">Ahri</p>
+                    <img src="https://ddragon.leagueoflegends.com/cdn/14.20.1/img/champion/Ahri.png" alt="Champion 6" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
+                    <p style="margin: -1; font-size: 0.7em; color: darkgreen;">+10%</p>
+                </div>
+                <div style="text-align: center; width: 60px;">
+                    <p style="margin: 0; font-size: 0.8em;">Garen</p>
+                    <img src="https://ddragon.leagueoflegends.com/cdn/14.20.1/img/champion/Garen.png" alt="Champion 7" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
+                    <p style="margin: -1; font-size: 0.7em; color: darkgreen;">+9%</p>
+                </div>
+                <div style="text-align: center; width: 60px;">
+                    <p style="margin: 0; font-size: 0.8em;">Jinx</p>
+                    <img src="https://ddragon.leagueoflegends.com/cdn/14.20.1/img/champion/Jinx.png" alt="Champion 8" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
+                    <p style="margin: -1; font-size: 0.7em; color: green;">+5%</p>
+                </div>
+                <div style="text-align: center; width: 60px;">
+                    <p style="margin: 0; font-size: 0.8em;">Yasuo</p>
+                    <img src="https://ddragon.leagueoflegends.com/cdn/14.20.1/img/champion/Yasuo.png" alt="Champion 9" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
+                    <p style="margin: -1; font-size: 0.7em; color: green;">+3%</p>
+                </div>
+                <div style="text-align: center; width: 60px;">
+                    <p style="margin: 0; font-size: 0.8em;">Lux</p>
+                    <img src="https://ddragon.leagueoflegends.com/cdn/14.20.1/img/champion/Lux.png" alt="Champion 10" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
+                    <p style="margin: -1; font-size: 0.7em; color: green;">+1%</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pie de página -->
+        <footer class="footer">
+            Hecho con ❤️ desde Málaga.<br>
+            Ad Infinitum is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games and all associated properties are trademarks or registered trademarks of Riot Games, Inc.
+        </footer>
     </div>
-</div>
-
-<!-- Meta actual -->
-<div class="meta-info">
-    <h3>Meta actual (tu rol, tu elo, tu región)</h3>
-    <p>Mejores campeones:</p>
-    <div class="meta-champion-container">
-
-        <div class="meta-champion-element">         
-            <p class="meta-champion-name">Shyvana</p>
-            <img src="https://ddragon.leagueoflegends.com/cdn/14.20.1/img/champion/Shyvana.png" alt="Shyvana" class="meta-champion-image">
-            <div class="meta-wr-badge">55.13%</div>
-        </div>
-
-        <div class="meta-champion-element">
-            <p class="meta-champion-name">Nidalee</p>
-            <img src="https://ddragon.leagueoflegends.com/cdn/14.20.1/img/champion/Nidalee.png" alt="Nidalee" class="meta-champion-image">
-            <div class="meta-wr-badge">54.27%</div>
-        </div>
-
-        <div class="meta-champion-element">
-            <p class="meta-champion-name">Amumu</p>
-            <img src="https://ddragon.leagueoflegends.com/cdn/14.20.1/img/champion/Amumu.png" alt="Amumu" class="meta-champion-image">
-            <div class="meta-wr-badge">53.88%</div>
-        </div>      
-
-        <div class="meta-champion-element">
-            <p class="meta-champion-name">Viego</p>
-            <img src="https://ddragon.leagueoflegends.com/cdn/14.20.1/img/champion/Viego.png" alt="Viego" class="meta-champion-image">
-            <div class="meta-wr-badge">53.74%</div>
-        </div>
-
-        <div class="meta-champion-element">
-            <p class="meta-champion-name">Sejuani</p>
-            <img src="https://ddragon.leagueoflegends.com/cdn/14.20.1/img/champion/Sejuani.png" alt="Sejuani" class="meta-champion-image">
-            <div class="meta-wr-badge">53.42%</div>
-        </div>
-    </div>
-</div>
-
-
-    <p>Mayores cambios:</p>
-    <div id="meta-big-changes" style="display: flex; gap: 10px;">
-        <div style="text-align: center; width: 60px;">
-            <p style="margin: 0; font-size: 0.8em;">Ahri</p>
-            <img src="https://ddragon.leagueoflegends.com/cdn/14.20.1/img/champion/Ahri.png" alt="Champion 6" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
-            <p style="margin: -1; font-size: 0.7em; color: darkgreen;">+10%</p>
-        </div>
-        <div style="text-align: center; width: 60px;">
-            <p style="margin: 0; font-size: 0.8em;">Garen</p>
-            <img src="https://ddragon.leagueoflegends.com/cdn/14.20.1/img/champion/Garen.png" alt="Champion 7" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
-            <p style="margin: -1; font-size: 0.7em; color: darkgreen;">+9%</p>
-        </div>
-        <div style="text-align: center; width: 60px;">
-            <p style="margin: 0; font-size: 0.8em;">Jinx</p>
-            <img src="https://ddragon.leagueoflegends.com/cdn/14.20.1/img/champion/Jinx.png" alt="Champion 8" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
-            <p style="margin: -1; font-size: 0.7em; color: green;">+5%</p>
-        </div>
-        <div style="text-align: center; width: 60px;">
-            <p style="margin: 0; font-size: 0.8em;">Yasuo</p>
-            <img src="https://ddragon.leagueoflegends.com/cdn/14.20.1/img/champion/Yasuo.png" alt="Champion 9" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
-            <p style="margin: -1; font-size: 0.7em; color: green;">+3%</p>
-        </div>
-        <div style="text-align: center; width: 60px;">
-            <p style="margin: 0; font-size: 0.8em;">Lux</p>
-            <img src="https://ddragon.leagueoflegends.com/cdn/14.20.1/img/champion/Lux.png" alt="Champion 10" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
-            <p style="margin: -1; font-size: 0.7em; color: green;">+1%</p>
-        </div>
-    </div>
-</div>
-
-
-<!-- Pie de página -->
-<footer>
-    Hecho con ❤️ desde Málaga.<br>
-    Ad Infinitum is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games and all associated properties are trademarks or registered trademarks of Riot Games, Inc.
-</footer>
 </body>
 </html>
