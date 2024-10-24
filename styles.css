@@ -130,8 +130,8 @@ body {
 /* Elemento de cada campeón en el meta */
 .meta-champion-element {
     text-align: center;
-    width: 80px;
-    height: 80px; /* De aquí a overflow es cutpaste de champion-image*/
+    width: 60px;
+    height: 60px; /* De aquí a overflow es cutpaste de champion-image*/
     border-radius: 50%; /* Hacer que la imagen sea circular */
     object-fit: cover; /* Asegura que la imagen se recorte bien */
     transform: scale(1.1); /* Aplicar zoom para ocultar el borde oscuro */
@@ -144,7 +144,7 @@ body {
 }
 
 .meta-champion-image {
-    width: 80px;
+    width: 60px;
 
 }
 
