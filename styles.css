@@ -109,25 +109,24 @@ body {
     margin-right: 10px;
 }
 
-/* Esto es para los avatares del estado del meta, etc. */
+/* Esto es para los avatares del estado del meta */
 .meta-champion-container {
-    text-align: center;
     display: grid;
-    grid-template-columns: repeat (5, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 20px;
+    justify-items: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.meta-champion-element {
+    text-align: center;
     width: 60px;
 }
 
 .meta-champion-name {
-    margin: 0;
+    margin: 5px 0;
     font-size: 0.8em;
-}
-
-.meta-champion-element {
-    position: relative;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
 }
 
 .meta-champion-image {
@@ -138,13 +137,12 @@ body {
 }
 
 .meta-wr-badge {
-    position: relative;
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
     background-color: darkgreen;
     color: white;
-    padding: 0px;
+    padding: 2px 4px;
     border-radius: 10px;
     font-size: 0.7em;
+    margin-top: 5px;
+    display: inline-block;
 }
+
