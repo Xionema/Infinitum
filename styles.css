@@ -130,7 +130,9 @@ body {
 /* Elemento de cada campeón en el meta */
 .meta-champion-element {
     text-align: center;
+    height: 60px;
     width: 60px;
+    overflow: hidden; /* Ocultar el contenido que se salga del círculo */
 }
 
 .meta-champion-name {
@@ -139,6 +141,7 @@ body {
 }
 
 .meta-champion-image {
+    height: 60px;
     width: 60px;
     border-radius: 50%; /* Hacer que la imagen sea circular */
     object-fit: cover; /* Asegura que la imagen se recorte bien */
