@@ -118,11 +118,7 @@ body {
 }
 
 /* Meta actual */
-.meta-info img {
-    width: 40px;
-    height: 40px;
-    border-radius: 10%;
-    margin-right: 10px;
+.meta-info {
 }
 
 /* Contenedor de campeones en el meta */
