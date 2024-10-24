@@ -117,10 +117,6 @@ body {
     border-radius: 50%;
 }
 
-/* Meta actual */
-.meta-info {
-}
-
 /* Contenedor de campeones en el meta */
 .meta-champion-container {
     display: grid;
@@ -135,6 +131,11 @@ body {
 .meta-champion-element {
     text-align: center;
     width: 80px;
+    height: 80px; /* De aquí a overflow es cutpaste de champion-image*/
+    border-radius: 50%; /* Hacer que la imagen sea circular */
+    object-fit: cover; /* Asegura que la imagen se recorte bien */
+    transform: scale(1.1); /* Aplicar zoom para ocultar el borde oscuro */
+    overflow: hidden; /* Ocultar el contenido que se salga del círculo */
 }
 
 .meta-champion-name {
@@ -144,11 +145,7 @@ body {
 
 .meta-champion-image {
     width: 80px;
-    height: 80px;
-    border-radius: 50%; /* Hacer que la imagen sea circular */
-    object-fit: cover; /* Asegura que la imagen se recorte bien */
-    transform: scale(1.1); /* Aplicar zoom para ocultar el borde oscuro */
-    overflow: hidden; /* Ocultar el contenido que se salga del círculo */
+
 }
 
 .meta-wr-badge {
@@ -171,26 +168,4 @@ body {
     position: static;
     bottom: 20px;
     display: block;
-}
-
-/* Ajustes adicionales de estética */
-.container {
-    border-radius: 15px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
-
-.objectives, .recent-games, .meta-info, .news {
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-h3 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    color: #fff;
-}
-
-p {
-    line-height: 1.5;
 }
