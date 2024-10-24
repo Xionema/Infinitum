@@ -131,12 +131,17 @@ body {
 .meta-champion-element {
     text-align: center;
     width: 60px;
-    overflow: hidden; /* Ocultar el contenido que se salga del círculo */
 }
 
 .meta-champion-name {
     margin: 5px 0;
     font-size: 0.8em;
+}
+
+.meta-champion-frame {
+    width: 60px;
+    border-radius: 50%;
+    overflow: hidden; /* Ocultar el contenido que se salga del círculo */
 }
 
 .meta-champion-image {
