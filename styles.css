@@ -131,11 +131,6 @@ body {
 .meta-champion-element {
     text-align: center;
     width: 60px;
-    height: 60px; /* De aquí a overflow es cutpaste de champion-image*/
-    border-radius: 50%; /* Hacer que la imagen sea circular */
-    object-fit: cover; /* Asegura que la imagen se recorte bien */
-    transform: scale(1.1); /* Aplicar zoom para ocultar el borde oscuro */
-    overflow: hidden; /* Ocultar el contenido que se salga del círculo */
 }
 
 .meta-champion-name {
@@ -145,7 +140,10 @@ body {
 
 .meta-champion-image {
     width: 60px;
-
+    border-radius: 50%; /* Hacer que la imagen sea circular */
+    object-fit: cover; /* Asegura que la imagen se recorte bien */
+    transform: scale(1.1); /* Aplicar zoom para ocultar el borde oscuro */
+    overflow: hidden; /* Ocultar el contenido que se salga del círculo */
 }
 
 .meta-wr-badge {
